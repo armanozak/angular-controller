@@ -10,11 +10,11 @@ import {
     <app-demo [name]="name"></app-demo>
     
     <app-demo-controller [name]="name.toLowerCase()">
-      <app-other></app-other>
+      <app-some></app-some>
     </app-demo-controller>
 
     <app-demo-controller [name]="name.toUpperCase()">
-      <app-other></app-other>
+      <app-some></app-some>
     </app-demo-controller>
   `,
 })
