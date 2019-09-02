@@ -58,6 +58,6 @@ export class DemoComponent implements OnInit {
 })
 export class DemoController extends DemoComponent implements OnChanges {
   ngOnChanges() {
-    this.cdRef.detectChanges();
+    this.cdRef.markForCheck();
   }
 }
