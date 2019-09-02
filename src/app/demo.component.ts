@@ -53,6 +53,7 @@ export class DemoComponent implements OnInit {
 
 @Component({
   selector: 'app-demo-controller',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
 })
 export class DemoController extends DemoComponent implements OnChanges {
