@@ -9,7 +9,6 @@ import {
   OnInit,
   Output,
 } from '@angular/core';
-import { InterfaceOf } from './util.model';
 
 @Component({
   selector: 'app-demo',
@@ -27,12 +26,8 @@ export class DemoComponent implements OnInit {
 
   private controller: DemoController;
 
-  get self(): InterfaceOf<DemoComponent> {
-    return this.controller || {
-      name: this.name,
-      greet: this.greet,
-      ngOnInit: this.ngOnInit,
-    };
+  get self(): DemoComponent {
+    return this.controller || this;
   }
 
   constructor(
